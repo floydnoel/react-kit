@@ -1,6 +1,9 @@
 {
   "name": "react-kit",
   "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/floydnoel/react-kit"
+  },
   "private": false,
   "license": "MIT",
   "dependencies": {
@@ -15,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ci": "..."
   },
   "eslintConfig": {
     "extends": "react-app"
