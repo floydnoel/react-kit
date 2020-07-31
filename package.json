@@ -1,6 +1,6 @@
 {
-  "name": "react-kit",
-  "version": "0.1.0",
+  "name": "@floydnoel/react-kit",
+  "version": "0.1.1",
   "main": "src/index.js",
   "repository": {
     "url": "https://github.com/floydnoel/react-kit"
