@@ -1,6 +1,6 @@
 import Markdown from './presentation/markdown/markdown';
 
-export {
+export default {
   // Components
   Markdown,
 };
