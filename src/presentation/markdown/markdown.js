@@ -5,22 +5,22 @@ import MarkdownToJsx from 'markdown-to-jsx';
 const Markdown = ({
   markdown,
   markdownUrl,
-  loadingMessage = '### processing markdown...',
+  loadingMessage = '##### processing markdown...',
   children,
   ...rest
 }) => {
-  let [md, setMd] = useState(children || markdown || loadingMessage);
+  let [content, setContent] = useState(children || markdown || loadingMessage);
   useEffect(() => {
-    const fetchMd = async (file) => {
+    const fetchMarkdown = async (file) => {
       let response = await fetch(file);
       let body = await response.text();
       return body;
     };
     if (markdownUrl) {
-      fetchMd(markdownUrl).then((markd) => setMd(markd));
+      fetchMarkdown(markdownUrl).then(setContent);
     }
   }, [markdownUrl]);
-  return <MarkdownToJsx {...rest}>{md}</MarkdownToJsx>;
+  return <MarkdownToJsx {...rest}>{content}</MarkdownToJsx>;
 };
 
 Markdown.propTypes = {
