@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Markdown from './presentation/markdown/markdown';
+import Markdown from './components/presentation/markdown/markdown';
 import test from './test.md';
 
 function App() {
