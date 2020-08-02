@@ -1,6 +1,6 @@
-import Markdown from './components/presentation/markdown/markdown'
+import Markdown from './components/presentation/markdown/markdown';
 
 export {
   // Components
   Markdown,
-}
+};
