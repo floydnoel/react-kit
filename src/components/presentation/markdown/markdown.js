@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import MarkdownToJsx from 'markdown-to-jsx';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import MarkdownToJsx from "markdown-to-jsx";
 
 const Markdown = ({
   markdown,
@@ -34,7 +34,7 @@ Markdown.propTypes = {
 };
 
 Markdown.defaultProps = {
-  loadingMessage: '##### processing markdown...',
+  loadingMessage: "##### processing markdown...",
 };
 
 export default Markdown;
