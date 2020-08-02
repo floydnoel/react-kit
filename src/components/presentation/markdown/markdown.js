@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import MarkdownToJsx from 'markdown-to-jsx';
+import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import MarkdownToJsx from 'markdown-to-jsx'
 
 const Markdown = ({
   markdown,
   markdownUrl,
-  loadingMessage = '##### processing markdown...',
+  loadingMessage,
   children,
   ...rest
 }) => {
-  let [content, setContent] = useState(children || markdown || loadingMessage);
+  let [content, setContent] = useState(children || markdown || loadingMessage)
   useEffect(() => {
-    const fetchMarkdown = async (file) => {
-      let response = await fetch(file);
-      let body = await response.text();
-      return body;
-    };
-    if (markdownUrl) {
-      fetchMarkdown(markdownUrl).then(setContent);
+    const fetchText = async ({ url }) => {
+      let response = await fetch(url)
+      let body = await response.text()
+      return body
     }
-  }, [markdownUrl]);
-  return <MarkdownToJsx {...rest}>{content}</MarkdownToJsx>;
-};
+    if (markdownUrl) {
+      fetchText({ url: markdownUrl }).then(setContent)
+    }
+  }, [markdownUrl])
+  return <MarkdownToJsx {...rest}>{content}</MarkdownToJsx>
+}
 
 Markdown.propTypes = {
   markdown: PropTypes.string,
@@ -29,6 +29,10 @@ Markdown.propTypes = {
   loadingMessage: PropTypes.string,
   children: PropTypes.node,
   rest: PropTypes.any,
-};
+}
 
-export default Markdown;
+Markdown.defaultProps = {
+  loadingMessage: '##### processing markdown...',
+}
+
+export default Markdown

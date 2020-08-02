@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 // import logo from './logo.svg';
-import './App.css';
-import Markdown from './components/presentation/markdown/markdown';
-import test from './test.md';
+import './App.css'
+import Markdown from './components/presentation/markdown/markdown'
+import test from './test.md'
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div className="App">
+      <header className="App-header">
         <p>React-Kit Documentation</p>
       </header>
       <p>my favorite packages and components together, forever.</p>
@@ -19,7 +19,7 @@ function App() {
         <Markdown markdownUrl={test} />
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,12 +1,29 @@
 {
   "name": "@floydnoel/react-kit",
   "version": "0.1.5",
-  "main": "src/main.js",
+  "description": "TODO",
+  "author": {
+    "name": "Floyd Noel",
+    "url": "https://github.com/floydnoel"
+  },
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/floydnoel/react-kit"
   },
-  "private": false,
-  "license": "MIT",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files",
+    "build-docs": "react-scripts build",
+    "test": "react-scripts test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/preset-react": "7.10.4",
+    "eslint-plugin-prettier": "3.1.4",
+    "prettier": "2.0.5"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -16,15 +33,10 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files",
-    "build-docs": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "browserslist": {
     "production": [
@@ -38,13 +50,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/preset-react": "^7.10.4"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }
