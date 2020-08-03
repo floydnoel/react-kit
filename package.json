@@ -13,18 +13,19 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files -s --ignore \"./**/*.spec.js\",\"./**/*.test.js\",\"./**/*.md\"",
-    "build-docs": "react-scripts build",
     "test": "react-scripts test",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build:components": "scripts/build-components.sh",
+    "build:docs": "react-scripts build",
+    "build:storybook": "echo TODO",
+    "build": "yarn build:components",
+    "clean": "rm -rf node_modules yarn.lock"
   },
   "devDependencies": {
     "@babel/cli": "7.10.5",
     "@babel/preset-react": "7.10.4",
     "eslint-plugin-prettier": "3.1.4",
-    "prettier": "2.0.5"
-  },
-  "dependencies": {
+    "prettier": "2.0.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -33,6 +34,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
+  "dependencies": {},
   "babel": {
     "presets": [
       "@babel/preset-react"

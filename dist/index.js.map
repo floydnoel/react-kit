@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/components/index.js"],"names":["Markdown"],"mappings":"AAAA,OAAOA,QAAP,MAAqB,kCAArB;AAEA,SAASA,QAAT","sourcesContent":["import Markdown from \"./presentation/markdown/markdown\";\n\nexport { Markdown };\n"],"file":"index.js"}

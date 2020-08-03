@@ -39,4 +39,3 @@ Markdown.defaultProps = {
   loadingMessage: "##### processing markdown..."
 };
 export default Markdown;
-//# sourceMappingURL=markdown.js.map
