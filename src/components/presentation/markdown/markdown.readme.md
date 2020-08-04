@@ -1,6 +1,6 @@
 # Markdown component
 
-This component handles rendering `markdown` formatted text and files. It uses the `markdown-to-jsx` package ([repo](https://github.com/probablyup/markdown-to-jsx/) [demo](https://probablyup.com/markdown-to-jsx/)). The API is compatible with `markdown-to-jsx`, with some additions.
+This component handles rendering `markdown` formatted text and files. It uses the `markdown-to-jsx` package ([repo](https://github.com/probablyup/markdown-to-jsx/) [demo](https://probablyup.com/markdown-to-jsx/)). The API is compatible with `markdown-to-jsx`, with some additions. The biggest is that this component can fetch mardown files from a given URL, passed in the `markdownUrl` prop as a string. This component has a loading message to accomodate network delays in fetching remote sources, which you can set (in markdown format, a plain string works as well) via the `loadingMessage` prop. Your markdown can be passed via the `markdown` prop or as the child of `Markdown` tags.
 
 Props:
 
@@ -25,8 +25,10 @@ const SomeMarkdown = () => {
 };
 
 const FetchedMarkdown = () => {
-  return <Markdown markdownUrl="https://example.com/something.md" />;
+  return (
+    <Markdown markdownUrl="https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md" />
+  );
 };
 ```
 
-TODO: how to include sample from a story?
+TODO: include samples from a stories
