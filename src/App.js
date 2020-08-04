@@ -1,8 +1,8 @@
-import React from "react";
-// import logo from "./logo.svg";
-import "./App.css";
-import Markdown from "./components/presentation/markdown/markdown";
-import test from "./test.md";
+import React from 'react';
+// import logo from './logo.svg';
+import './App.css';
+import Markdown from './components/presentation/markdown/markdown';
+import test from './test.md';
 
 function App() {
   return (
@@ -20,9 +20,9 @@ function App() {
       </div>
       <div
         style={{
-          background: "rgb(246, 248, 250)",
-          textAlign: "left",
-          padding: "1em",
+          background: 'rgb(246, 248, 250)',
+          textAlign: 'left',
+          padding: '1em',
         }}
       >
         <Markdown markdownUrl="https://raw.githubusercontent.com/probablyup/markdown-to-jsx/master/README.md" />
