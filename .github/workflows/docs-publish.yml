@@ -5,9 +5,9 @@ name: Publish Docs to GH Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn --frozen-lockfile
       - run: yarn test
-      - run: yarn deploy
+      - run: yarn deploy --silent -r https://${{ secrets.ACCESS_TOKEN }}@github.com/user/private-repo.git
       # - name: Upload Docs
       #   uses: actions/upload-artifact@v2
       #   with:

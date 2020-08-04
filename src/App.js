@@ -18,8 +18,14 @@ function App() {
       <div>
         <Markdown markdownUrl={test} />
       </div>
-      <div>
-        <Markdown markdownUrl="https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md" />
+      <div
+        style={{
+          background: "rgb(246, 248, 250)",
+          textAlign: "left",
+          padding: "1em",
+        }}
+      >
+        <Markdown markdownUrl="https://raw.githubusercontent.com/probablyup/markdown-to-jsx/master/README.md" />
       </div>
     </div>
   );
