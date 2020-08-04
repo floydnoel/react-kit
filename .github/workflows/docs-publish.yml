@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn --frozen-lockfile
       - run: yarn test
-      - run: yarn deploy --silent -r https://${{ secrets.ACCESS_TOKEN }}@github.com/floydnoel/react-kit.git
+      - run: yarn deploy -r https://${{ secrets.ACCESS_TOKEN }}@github.com/floydnoel/react-kit.git
       # - name: Upload Docs
       #   uses: actions/upload-artifact@v2
       #   with:
