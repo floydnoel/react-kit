@@ -18,6 +18,9 @@ function App() {
       <div>
         <Markdown markdownUrl={test} />
       </div>
+      <div>
+        <Markdown markdownUrl="https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md" />
+      </div>
     </div>
   );
 }
