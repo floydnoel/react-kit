@@ -1,18 +1,18 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
-import React, { useState } from 'react';
+import React from 'react';
 // import logo from './logo.svg';
 import './app.css';
 import Markdown from 'components/presentation/markdown/markdown';
-import TextField from 'components/interaction/text-field/text-field';
+// import TextField from 'components/interaction/text-field/text-field';
 // import json from './package.json';
 import readme from './README.md';
 
 // const Json = () => <div>{JSON.stringify(json)}</div>;
 
 function App() {
-  const [markdownUrl, setMarkdownUrl] = useState(
-    'https://raw.githubusercontent.com/probablyup/markdown-to-jsx/master/README.md'
-  );
+  // const [markdownUrl, setMarkdownUrl] = useState(
+  //   'https://raw.githubusercontent.com/probablyup/markdown-to-jsx/master/README.md'
+  // );
   return (
     <div className='App'>
       <header className='App-header'>
