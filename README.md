@@ -31,21 +31,17 @@ import { Markdown } from '@floydnoel/react-kit';
 <Markdown># hello, world</Markdown>;
 ```
 
-/floydnoel/react-kit/tree/babel/src/components/presentation/markdown
-/floydnoel/react-kit/blob/babel/floydnoel/react-kit/tree/babel/src/components/presentation/markdown
-/floydnoel/react-kit/blob/babel/floydnoel/react-kit/tree/babel/src/components/presentation/markdown
-
 ## Components
 
-- Markdown [ [repo](/src/components/presentation/markdown), [docs](/src/components/presentation/markdown) ]
+- Markdown [ [repo](/src/components/presentation/markdown), [docs](/react-kit/src/components/presentation/markdown) ]
 - TextField [ [repo](https://github.com/floydnoel/react-kit/tree/babel/src/components/interaction/text-field), [docs](https://floydnoel.github.io/react-kit/text-field) ]
 - Json [ [repo](https://github.com/floydnoel/react-kit), [docs](https://floydnoel.github.io/react-kit/) ]
 
 ## Core Ideals
 
-- React-first components, built just for React. This will include React-likes (like Preact) in the future.
-- Dogfood all components via the documentation app, built with `create-react-app`
-- Built in VSCode support for tooling
+- React-first components, built just for React. This will include testing with React-likes (like Preact) in the future.
+- Dogfood all components via the documentation app, which is built with `create-react-app`.
+- Built in VSCode support for tooling.
   - Debugging support (TODO: test/setup)
   - [Prettier](prettier.io)
   - [ESLint](eslint.org)
@@ -58,7 +54,7 @@ import { Markdown } from '@floydnoel/react-kit';
   - presentation/presentational
   - interaction/interactive
   - these will change (TODO: make pros/cons list)
-- Directories
+- Directory structure
   - `react-kit`: root dir, contains configuration and miscellaneous files
     - `.github`: github specific files, such as action workflows
     - `build`: created by `yarn build:docs`, holds the docs static deploy files
