@@ -4,6 +4,8 @@ import "./App.css";
 import Markdown from "./components/presentation/markdown/markdown";
 import test from "./test.md";
 import TextField from "components/interactive/text-field/text-field";
+// import json from './package.json'
+// import readme from './README.md'
 
 function App() {
   const [markdownUrl, setMarkdownUrl] = useState(
@@ -12,9 +14,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>React-Kit Documentation</p>
+        <p title="@floydnoel/react-kit">React Kit</p>
+        <p style={{ fontSize: "0.5em" }}>@floydnoel/react-kit</p>
+        {/* <p>{json}</p> */}
+        {/* <p>{readme}</p> */}
       </header>
       <p>my favorite packages and components together, forever.</p>
+      <p>
+        [ <a href="https://floydnoel.github.io/react-kit/">docs</a>,{" "}
+        <a href="https://github.com/floydnoel/react-kit">repo</a> ]
+      </p>
       <div>The first component: Markdown</div>
       <div>
         <Markdown>##### This is markdown!</Markdown>
@@ -31,9 +40,16 @@ function App() {
           margin: "32px auto",
         }}
       >
-        <TextField onChange={({ target: { value } }) => setMarkdownUrl(value)}>
-          {markdownUrl}
-        </TextField>
+        <TextField onChangeValue={setMarkdownUrl}>{markdownUrl}</TextField>
+        <button
+          onClick={() =>
+            setMarkdownUrl(
+              "https://raw.githubusercontent.com/probablyup/markdown-to-jsx/master/README.md"
+            )
+          }
+        >
+          reset
+        </button>
         <Markdown markdownUrl={markdownUrl} />
       </div>
     </div>

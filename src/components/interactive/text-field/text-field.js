@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
-const TextField = ({ children, style, ...rest }) => (
-  <input
-    type="text"
-    value={children}
-    style={{ width: "100%", ...style }}
-    {...rest}
-  />
-);
+const TextField = ({
+  value,
+  onChange,
+  onChangeValue,
+  children,
+  style,
+  ...rest
+}) => {
+  return (
+    <input
+      {...{
+        type: "text",
+        value: value || children,
+        style: { width: "100%", ...style },
+        onChange: (e) => {
+          if (onChange) onChange(e);
+          if (onChangeValue) onChangeValue(e.target.value);
+        },
+        ...rest,
+      }}
+      // type="text"
+      // value={value || children}
+      // style={{ width: "100%", ...style }}
+      // onChange={(e) => {
+      //   if (onChange) onChange(e);
+      //   if (onChangeValue) onChangeValue(e.target.value);
+      // }}
+      // {...rest}
+    />
+  );
+};
 
 export default TextField;
