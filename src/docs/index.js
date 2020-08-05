@@ -9,7 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path='/src/components/presentation/markdown'>
+        <Route path='/react-kit/src/components/presentation/markdown'>
           <div>Yeah!</div>
         </Route>
         <Route>
