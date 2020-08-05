@@ -12,6 +12,10 @@ ReactDOM.render(
         <Route path='/react-kit/src/components/presentation/markdown'>
           <div>Yeah!</div>
         </Route>
+
+        <Route path='/src/components/presentation/markdown'>
+          <div>Yeah2!</div>
+        </Route>
         <Route>
           <App />
         </Route>
