@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import { homepage } from 'docs/package.json';
-console.log({ homepage });
 
 const Router = ({ children, ...rest }) => (
-  <BrowserRouter {...{ basename: homepage, ...rest }}>{children}</BrowserRouter>
+  <BrowserRouter {...{ basename: '/react-kit', ...rest }}>
+    {children}
+  </BrowserRouter>
 );
 
 export { Router, Switch, Route, Link };
