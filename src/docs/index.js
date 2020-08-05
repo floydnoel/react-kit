@@ -2,11 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from 'docs/app';
+import { Router, Switch, Route } from 'components';
 import * as serviceWorker from 'docs/service-worker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route path='/src/components/presentation/markdown'>
+          <div>Yeah!</div>
+        </Route>
+        <Route>
+          <App />
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

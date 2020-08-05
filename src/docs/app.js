@@ -2,7 +2,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './app.css';
-import Markdown from 'components/presentation/markdown/markdown';
+import { Markdown } from 'components';
 // import TextField from 'components/interaction/text-field/text-field';
 // import json from './package.json';
 import readme from './README.md';
