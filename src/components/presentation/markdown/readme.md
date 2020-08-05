@@ -26,7 +26,7 @@ const SomeMarkdown = () => {
 
 const FetchedMarkdown = () => {
   return (
-    <Markdown markdownUrl="https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md" />
+    <Markdown markdownUrl='https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md' />
   );
 };
 ```

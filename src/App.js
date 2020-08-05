@@ -6,8 +6,8 @@ import test from './test.md';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
         <p>React-Kit Documentation</p>
       </header>
       <p>my favorite packages and components together, forever.</p>
@@ -23,9 +23,11 @@ function App() {
           background: 'rgb(246, 248, 250)',
           textAlign: 'left',
           padding: '1em',
+          maxWidth: '900px',
+          margin: '32px auto',
         }}
       >
-        <Markdown markdownUrl="https://raw.githubusercontent.com/probablyup/markdown-to-jsx/master/README.md" />
+        <Markdown markdownUrl='https://raw.githubusercontent.com/probablyup/markdown-to-jsx/master/README.md' />
       </div>
     </div>
   );
