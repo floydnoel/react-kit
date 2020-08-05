@@ -1,4 +1,4 @@
-# react-kit
+# React Kit
 
 my favorite packages and components together, forever.
 
