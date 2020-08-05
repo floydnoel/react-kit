@@ -1,6 +1,6 @@
 {
   "name": "@floydnoel/react-kit",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "My favorite packages and components together, forever.",
   "author": {
     "name": "Floyd Noel",
@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "format": "prettier --write .",
     "build:components": "scripts/build-components.sh",
-    "build:docs": "react-scripts build",
+    "build:docs": "scripts/build-docs.sh",
     "build:storybook": "echo TODO",
     "build": "yarn build:docs && yarn build:components",
     "clean": "rm -rf node_modules yarn.lock",
