@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from 'react';
 
 const TextField = ({
   value,
@@ -11,9 +11,9 @@ const TextField = ({
   return (
     <input
       {...{
-        type: "text",
+        type: 'text',
         value: value || children,
-        style: { width: "100%", ...style },
+        style: { width: '100%', ...style },
         onChange: (e) => {
           if (onChange) onChange(e);
           if (onChangeValue) onChangeValue(e.target.value);
