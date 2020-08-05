@@ -13,9 +13,7 @@ const Router = ({ children, ...rest }) => (
 );
 
 const Link = ({ href, children, ...rest }) => (
-  <BrowserLink to={href} {...rest}>
-    {children}
-  </BrowserLink>
+  <BrowserLink {...{ to: href, ...rest }}>{children}</BrowserLink>
 );
 
 export { Router, Switch, Route, Link };
