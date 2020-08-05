@@ -32,7 +32,7 @@ import { Markdown } from '@floydnoel/react-kit';
 
 ## Components
 
-- [Markdown](/src/components/markdown)
+- [Markdown](/react-kit/src/components/markdown)
 - [TextField](/src/components/text-field)
 - [Json](/src/components/json)
 
