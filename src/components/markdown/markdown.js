@@ -7,11 +7,7 @@ import { Link } from 'components';
 const Markdown = ({
   markdown,
   markdownUrl,
-  link = ({ href, children, ...rest }) => (
-    <Link to={href} {...rest}>
-      {children}
-    </Link>
-  ),
+  link = Link,
   section,
   children,
   ...rest
@@ -55,6 +51,7 @@ Markdown.propTypes = {
   markdownUrl: PropTypes.string,
   children: PropTypes.node,
   rest: PropTypes.any,
+  link: PropTypes.element,
 };
 
 Markdown.defaultProps = {
