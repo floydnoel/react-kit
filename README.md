@@ -2,10 +2,29 @@
 
 my favorite packages and components together, forever.
 
+## Status
+
+Work-in-progress, expect a lot of changes.
+
 ## Getting started
+
+### set up an app and add the package
 
 ```sh
 npx create-react-app [your-app-name]
 cd [your-app-name]
 yarn add @floydnoel/react-kit
 ```
+
+### import and use
+
+```js
+import { Markdown } from '@floydnoel/react-kit'
+
+// ...
+
+// in a component
+<Markdown># hello, world</Markdown>
+```
+
+
