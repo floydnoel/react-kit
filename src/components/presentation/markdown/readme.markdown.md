@@ -17,8 +17,8 @@ Markdown.propTypes = {
 Examples:
 
 ```js
-import React from 'react';
-import { Markdown } from '@floydnoel/react-kit';
+import React from "react";
+import { Markdown } from "@floydnoel/react-kit";
 
 const SomeMarkdown = () => {
   return <Markdown># Some markdown</Markdown>;
@@ -26,7 +26,7 @@ const SomeMarkdown = () => {
 
 const FetchedMarkdown = () => {
   return (
-    <Markdown markdownUrl='https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md' />
+    <Markdown markdownUrl="https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md" />
   );
 };
 ```

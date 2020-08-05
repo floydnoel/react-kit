@@ -19,12 +19,10 @@ yarn add @floydnoel/react-kit
 ### import and use
 
 ```js
-import { Markdown } from '@floydnoel/react-kit'
+import { Markdown } from "@floydnoel/react-kit";
 
 // ...
 
 // in a component
-<Markdown># hello, world</Markdown>
+<Markdown># hello, world</Markdown>;
 ```
-
-
