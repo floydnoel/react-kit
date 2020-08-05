@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-// import logo from './logo.svg';
+// import logo from "./logo.svg";
 import "./App.css";
 import Markdown from "./components/presentation/markdown/markdown";
 import test from "./test.md";
 import TextField from "components/interactive/text-field/text-field";
-// import json from './package.json'
-// import readme from './README.md'
+import json from "./package.json";
+import readme from "./README.md";
+
+const Json = () => <div>{JSON.stringify(json)}</div>;
 
 function App() {
   const [markdownUrl, setMarkdownUrl] = useState(
@@ -16,8 +18,10 @@ function App() {
       <header className="App-header">
         <p title="@floydnoel/react-kit">React Kit</p>
         <p style={{ fontSize: "0.5em" }}>@floydnoel/react-kit</p>
-        {/* <p>{json}</p> */}
+        {/* <p>{JSON.stringify(json)}</p> */}
+        <Json>{json}</Json>
         {/* <p>{readme}</p> */}
+        <Markdown markdownUrl={readme} />
       </header>
       <p>my favorite packages and components together, forever.</p>
       <p>
