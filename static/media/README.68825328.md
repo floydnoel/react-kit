@@ -30,8 +30,11 @@ import { Markdown } from '@floydnoel/react-kit';
 // in a component
 <Markdown># hello, world</Markdown>;
 ```
+
 /floydnoel/react-kit/tree/babel/src/components/presentation/markdown
 /floydnoel/react-kit/blob/babel/floydnoel/react-kit/tree/babel/src/components/presentation/markdown
+/floydnoel/react-kit/blob/babel/floydnoel/react-kit/tree/babel/src/components/presentation/markdown
+
 ## Components
 
 - Markdown [ [repo](/src/components/presentation/markdown), [docs](/src/components/presentation/markdown) ]

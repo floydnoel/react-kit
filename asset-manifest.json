@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/react-kit/static/css/main.349bc4bf.chunk.css",
-    "main.js": "/react-kit/static/js/main.626293d3.chunk.js",
-    "main.js.map": "/react-kit/static/js/main.626293d3.chunk.js.map",
+    "main.js": "/react-kit/static/js/main.fcad22d5.chunk.js",
+    "main.js.map": "/react-kit/static/js/main.fcad22d5.chunk.js.map",
     "runtime-main.js": "/react-kit/static/js/runtime-main.173820cd.js",
     "runtime-main.js.map": "/react-kit/static/js/runtime-main.173820cd.js.map",
     "static/js/2.7820ba39.chunk.js": "/react-kit/static/js/2.7820ba39.chunk.js",
     "static/js/2.7820ba39.chunk.js.map": "/react-kit/static/js/2.7820ba39.chunk.js.map",
     "index.html": "/react-kit/index.html",
-    "precache-manifest.81df0cfe24d1f05a2e29a252f0c6a4da.js": "/react-kit/precache-manifest.81df0cfe24d1f05a2e29a252f0c6a4da.js",
+    "precache-manifest.ece5f06722b4cd276b25d1abceb140b4.js": "/react-kit/precache-manifest.ece5f06722b4cd276b25d1abceb140b4.js",
     "service-worker.js": "/react-kit/service-worker.js",
     "static/css/main.349bc4bf.chunk.css.map": "/react-kit/static/css/main.349bc4bf.chunk.css.map",
     "static/js/2.7820ba39.chunk.js.LICENSE.txt": "/react-kit/static/js/2.7820ba39.chunk.js.LICENSE.txt",
-    "static/media/README.md": "/react-kit/static/media/README.99b5549e.md"
+    "static/media/README.md": "/react-kit/static/media/README.68825328.md"
   },
   "entrypoints": [
     "static/js/runtime-main.173820cd.js",
     "static/js/2.7820ba39.chunk.js",
     "static/css/main.349bc4bf.chunk.css",
-    "static/js/main.626293d3.chunk.js"
+    "static/js/main.fcad22d5.chunk.js"
   ]
 }
