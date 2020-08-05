@@ -30,10 +30,11 @@ import { Markdown } from '@floydnoel/react-kit';
 // in a component
 <Markdown># hello, world</Markdown>;
 ```
-
+/floydnoel/react-kit/tree/babel/src/components/presentation/markdown
+/floydnoel/react-kit/blob/babel/floydnoel/react-kit/tree/babel/src/components/presentation/markdown
 ## Components
 
-- Markdown [ [repo](/floydnoel/react-kit/tree/babel/src/components/presentation/markdown), [docs](/floydnoel/react-kit/tree/babel/src/components/presentation/markdown) ]
+- Markdown [ [repo](/src/components/presentation/markdown), [docs](/src/components/presentation/markdown) ]
 - TextField [ [repo](https://github.com/floydnoel/react-kit/tree/babel/src/components/interaction/text-field), [docs](https://floydnoel.github.io/react-kit/text-field) ]
 - Json [ [repo](https://github.com/floydnoel/react-kit), [docs](https://floydnoel.github.io/react-kit/) ]
 
@@ -49,7 +50,7 @@ import { Markdown } from '@floydnoel/react-kit';
 
 ## Code conventions
 
-- All filenames are made up of lower case letters only (use a hyphen between words: `service-worker.js`), like npm packages.
+- Like `npm` packages, all filenames are made up of lower case letters only (use a hyphen between words: `service-worker.js`).
 - Components are split into the following types:
   - presentation/presentational
   - interaction/interactive
