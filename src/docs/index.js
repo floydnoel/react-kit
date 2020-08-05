@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom';
 
 import App from 'docs/app';
 import { Router, Switch, Route } from 'components';
+
 import * as serviceWorker from 'docs/service-worker';
+import MarkdownDemo from 'components/markdown/markdown.demo';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path='/react-kit/src/components/presentation/markdown'>
-          <div>Yeah!</div>
-        </Route>
-
-        <Route path='/src/components/presentation/markdown'>
-          <div>Yeah2!</div>
+        <Route exact path='/src/components/markdown'>
+          <MarkdownDemo />
         </Route>
         <Route>
           <App />

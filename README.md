@@ -33,7 +33,7 @@ import { Markdown } from '@floydnoel/react-kit';
 
 ## Components
 
-- Markdown [ [repo](/src/components/presentation/markdown), [docs](/react-kit/src/components/presentation/markdown) ]
+- Markdown [ [repo](/src/components/markdown), [docs](/src/components/markdown) ]
 - TextField [ [repo](https://github.com/floydnoel/react-kit/tree/babel/src/components/interaction/text-field), [docs](https://floydnoel.github.io/react-kit/text-field) ]
 - Json [ [repo](https://github.com/floydnoel/react-kit), [docs](https://floydnoel.github.io/react-kit/) ]
 
