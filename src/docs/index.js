@@ -5,7 +5,7 @@ import App from 'docs/app';
 import { Router, Switch, Route } from 'components';
 
 import * as serviceWorker from 'docs/service-worker';
-import MarkdownDemo from 'components/markdown/markdown.demo';
+import MarkdownDemo from 'components/markdown/markdown.story';
 
 ReactDOM.render(
   <React.StrictMode>
