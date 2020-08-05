@@ -2,8 +2,20 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import MarkdownToJsx from 'markdown-to-jsx';
 import { getSectionContent } from './markdown-utils';
+import { Link } from 'components';
 
-const Markdown = ({ markdown, markdownUrl, section, children, ...rest }) => {
+const Markdown = ({
+  markdown,
+  markdownUrl,
+  link = ({ href, children, ...rest }) => (
+    <Link to={href} {...rest}>
+      {children}
+    </Link>
+  ),
+  section,
+  children,
+  ...rest
+}) => {
   const [content, setContent] = useState(children || section || markdown);
   useEffect(() => {
     const fetchText = async ({ url }) => {
@@ -17,7 +29,25 @@ const Markdown = ({ markdown, markdownUrl, section, children, ...rest }) => {
       );
     }
   }, [markdownUrl, section]);
-  return <MarkdownToJsx {...rest}>{content}</MarkdownToJsx>;
+  return (
+    <MarkdownToJsx
+      {...{
+        options: {
+          overrides: {
+            a: {
+              component: link,
+              // props: {
+              //   className: 'foo',
+              // },
+            },
+          },
+        },
+        ...rest,
+      }}
+    >
+      {content}
+    </MarkdownToJsx>
+  );
 };
 
 Markdown.propTypes = {

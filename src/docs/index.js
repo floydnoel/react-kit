@@ -5,14 +5,14 @@ import App from 'docs/app';
 import { Router, Switch, Route } from 'components';
 
 import * as serviceWorker from 'docs/service-worker';
-import MarkdownDemo from 'components/markdown/markdown.story';
+import MarkdownStory from 'components/markdown/markdown.story';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
         <Route exact path='/src/components/markdown'>
-          <MarkdownDemo />
+          <MarkdownStory />
         </Route>
         <Route>
           <App />

@@ -7,8 +7,9 @@ import {
   TextField,
 } from 'components';
 import readme from './readme.md';
+import { Link } from 'react-router-dom';
 
-const MarkdownDemo = () => {
+const MarkdownStory = () => {
   const [markdownUrl, setMarkdownUrl] = useState('');
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -39,10 +40,10 @@ const MarkdownDemo = () => {
         >
           reset
         </button>
-        <Markdown markdownUrl={markdownUrl} />
+        <Markdown link={Link} markdownUrl={markdownUrl} />
       </div>
     </div>
   );
 };
 
-export default MarkdownDemo;
+export default MarkdownStory;
