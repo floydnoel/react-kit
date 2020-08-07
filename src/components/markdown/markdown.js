@@ -4,15 +4,20 @@ import MarkdownToJsx from 'markdown-to-jsx';
 import { getSectionContent } from './markdown-utils';
 import { Link } from 'components';
 
+// const noMarkdownErrorMessage = 'No markdown or markdown source received.';
+
 const Markdown = ({
   markdown,
   markdownUrl,
   link = Link,
   section,
-  children,
+  children = markdown,
+  initializingMessage = 'Initializing markdown.',
+  fetchingMessage = 'Fetching markdown.',
+  noMarkdownErrorMessage = 'No markdown or markdown source received.',
   ...rest
 }) => {
-  const [content, setContent] = useState(children || section || markdown);
+  const [content, setContent] = useState(children || initializingMessage);
   useEffect(() => {
     const fetchText = async ({ url }) => {
       const response = await fetch(url);
@@ -20,11 +25,14 @@ const Markdown = ({
       return body;
     };
     if (markdownUrl) {
+      setContent(fetchingMessage || initializingMessage);
       fetchText({ url: markdownUrl }).then((content) =>
         setContent(section ? getSectionContent({ content, section }) : content)
       );
     }
-  }, [markdownUrl, section]);
+  }, [fetchingMessage, initializingMessage, markdownUrl, section]);
+  // option to throw instead?
+  if (!children && !markdownUrl) return noMarkdownErrorMessage;
   return (
     <MarkdownToJsx
       {...{
@@ -38,6 +46,9 @@ const Markdown = ({
             },
           },
         },
+        // style: {
+        //   animation: 'slidein 3s',
+        // },
         ...rest,
       }}
     >
@@ -49,13 +60,13 @@ const Markdown = ({
 Markdown.propTypes = {
   markdown: PropTypes.string,
   markdownUrl: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.string,
   rest: PropTypes.any,
   link: PropTypes.element,
 };
 
-Markdown.defaultProps = {
-  children: '##### processing markdown...',
-};
+// Markdown.defaultProps = {
+//   children: '##### processing markdown...',
+// };
 
 export default Markdown;
