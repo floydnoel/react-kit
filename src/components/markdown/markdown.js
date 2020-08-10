@@ -1,38 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import MarkdownToJsx from 'markdown-to-jsx';
-import { getSectionContent } from './markdown-utils';
-import { Link } from 'components';
+import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
-// const noMarkdownErrorMessage = 'No markdown or markdown source received.';
+import MarkdownToJsx from 'markdown-to-jsx'
+import { Link } from 'components'
 
-const Markdown = ({
+import { getSectionContent } from './markdown-utils'
+
+// ***TODOS***
+// - better code blocks & styling
+// - handle external links
+// - option to throw instead?
+// - log possible errors?
+
+let Markdown = ({
   markdown,
   markdownUrl,
-  link = Link,
+  link,
   section,
   children = markdown,
-  initializingMessage = 'Initializing markdown.',
-  fetchingMessage = 'Fetching markdown.',
-  noMarkdownErrorMessage = 'No markdown or markdown source received.',
+  verbose,
+  initializingMessage,
+  fetchingMessage,
+  noMarkdownMessage,
   ...rest
 }) => {
-  const [content, setContent] = useState(children || initializingMessage);
+  let [content, setContent] = useState(children || initializingMessage)
   useEffect(() => {
-    const fetchText = async ({ url }) => {
-      const response = await fetch(url);
-      const body = await response.text();
-      return body;
-    };
-    if (markdownUrl) {
-      setContent(fetchingMessage || initializingMessage);
-      fetchText({ url: markdownUrl }).then((content) =>
-        setContent(section ? getSectionContent({ content, section }) : content)
-      );
+    let fetchText = async ({ url }) => {
+      let response = await fetch(url)
+      let body = await response.text()
+      return body
     }
-  }, [fetchingMessage, initializingMessage, markdownUrl, section]);
-  // option to throw instead?
-  if (!children && !markdownUrl) return noMarkdownErrorMessage;
+    if (markdownUrl) {
+      if (fetchingMessage) setContent(fetchingMessage)
+      fetchText({ url: markdownUrl }).then((content) => {
+        if (section) {
+          let con = getSectionContent({ content, section })
+          setContent(con ? con : noMarkdownMessage)
+        } else if (content.indexOf('<!DOCTYPE html>') === 0) {
+          setContent(noMarkdownMessage)
+        } else {
+          setContent(content)
+        }
+      })
+    }
+  }, [fetchingMessage, noMarkdownMessage, markdownUrl, section])
+
+  if (!children && !markdownUrl) return noMarkdownMessage
   return (
     <MarkdownToJsx
       {...{
@@ -54,19 +68,28 @@ const Markdown = ({
     >
       {content}
     </MarkdownToJsx>
-  );
-};
+  )
+}
 
 Markdown.propTypes = {
   markdown: PropTypes.string,
   markdownUrl: PropTypes.string,
-  children: PropTypes.string,
-  rest: PropTypes.any,
   link: PropTypes.element,
-};
+  section: PropTypes.string,
+  children: PropTypes.string,
+  verbose: PropTypes.bool,
+  initializingMessage: PropTypes.string,
+  fetchingMessage: PropTypes.string,
+  noMarkdownMessage: PropTypes.string,
+  rest: PropTypes.any,
+}
 
-// Markdown.defaultProps = {
-//   children: '##### processing markdown...',
-// };
+Markdown.defaultProps = {
+  verbose: true,
+  link: Link,
+  initializingMessage: '',
+  fetchingMessage: '',
+  noMarkdownMessage: '',
+}
 
-export default Markdown;
+export default Markdown

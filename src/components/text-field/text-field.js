@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const TextField = ({
   value,
@@ -15,8 +15,8 @@ const TextField = ({
         value: value || children,
         style: { width: '100%', ...style },
         onChange: (e) => {
-          if (onChange) onChange(e);
-          if (onChangeValue) onChangeValue(e.target.value);
+          if (onChange) onChange(e)
+          if (onChangeValue) onChangeValue(e.target.value)
         },
         ...rest,
       }}
@@ -29,7 +29,7 @@ const TextField = ({
       // }}
       // {...rest}
     />
-  );
-};
+  )
+}
 
-export default TextField;
+export default TextField

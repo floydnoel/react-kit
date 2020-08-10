@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   // Router,
   // Switch,
   // Route,
   Markdown,
   TextField,
-} from 'components';
-import readme from './readme.md';
-import { Link } from 'react-router-dom';
+} from 'components'
+import readme from './readme.md'
+// import { Link } from 'react-router-dom'
 
 const MarkdownStory = () => {
-  const [markdownUrl, setMarkdownUrl] = useState('');
+  const [markdownUrl, setMarkdownUrl] = useState('')
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
       <Markdown markdownUrl={readme} />
@@ -40,10 +40,13 @@ const MarkdownStory = () => {
         >
           reset
         </button>
-        <Markdown link={Link} markdownUrl={markdownUrl} />
+        <Markdown
+          noMarkdownMessage='Specify a markdown URL to begin'
+          markdownUrl={markdownUrl}
+        />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MarkdownStory;
+export default MarkdownStory

@@ -1,11 +1,11 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
-import React from 'react';
+import React from 'react'
 // import logo from './logo.svg';
-import './app.css';
-import { Markdown } from 'components';
+import './app.css'
+import { Markdown } from 'components'
 // import TextField from 'components/interaction/text-field/text-field';
 // import json from './package.json';
-import readme from './README.md';
+import readme from './README.md'
 
 // const Json = () => <div>{JSON.stringify(json)}</div>;
 
@@ -13,7 +13,10 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Markdown markdownUrl={`${readme}`} section={`react-kit`} />
+        <Markdown
+          markdownUrl={'readme'}
+          //section={`react-kit`}
+        />
       </header>
       {/* <Json>{json}</Json> */}
       <p>
@@ -33,7 +36,7 @@ function App() {
         <Markdown markdownUrl={readme} section={'code-conventions'} />
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
