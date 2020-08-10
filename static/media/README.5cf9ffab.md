@@ -49,10 +49,6 @@ import { Markdown } from '@floydnoel/react-kit';
 ## Code conventions
 
 - Like `npm` packages, all filenames are made up of lower case letters only (use a hyphen between words: `service-worker.js`).
-- Components are split into the following types:
-  - presentation/presentational
-  - interaction/interactive
-  - these will change (TODO: make pros/cons list)
 - Directory structure
   - `react-kit`: root dir, contains configuration and miscellaneous files
     - `.github`: github specific files, such as action workflows
