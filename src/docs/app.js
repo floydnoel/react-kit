@@ -14,8 +14,8 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <Markdown
-          markdownUrl={'readme'}
-          //section={`react-kit`}
+          markdownUrl={readme}
+          section={`react-kit`}
         />
       </header>
       {/* <Json>{json}</Json> */}
