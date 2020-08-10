@@ -3,7 +3,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Link, // as BrowserLink,
+  Link as BrowserLink,
 } from 'react-router-dom'
 
 const Router = ({
@@ -13,7 +13,7 @@ const Router = ({
   ...rest
 }) => <BrowserRouter {...{ basename, ...rest }}>{children}</BrowserRouter>
 
-const MyLink = ({
+const Link = ({
   // copy `href` to `to` if necessary
   href,
   to,
@@ -21,10 +21,11 @@ const MyLink = ({
   ...rest
 }) => {
   console.log({ href, to, winner: to || href })
-  return <Link {...{ to: to || href, ...rest }}>{children}</Link>
+  return <BrowserLink {...{ to: to || href, ...rest }}>{children}</BrowserLink>
 }
 
-export { Router, Switch, Route, MyLink as Link }
+export { Router, Switch, Route, //MyLink as 
+Link }
 // https://reactrouter.com/web/guides/quick-start
 // basename: process.env.PUBLIC_URL
 // https://github.com/facebook/create-react-app/issues/1765
