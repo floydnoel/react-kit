@@ -15,10 +15,10 @@ import { getSectionContent } from './markdown-utils'
 let Markdown = ({
   markdown,
   markdownUrl,
-  link,
+  link = Link,
   section,
   children = markdown,
-  verbose,
+  // verbose,
   initializingMessage,
   fetchingMessage,
   noMarkdownMessage,
@@ -77,7 +77,7 @@ Markdown.propTypes = {
   link: PropTypes.element,
   section: PropTypes.string,
   children: PropTypes.string,
-  verbose: PropTypes.bool,
+  // verbose: PropTypes.bool,
   initializingMessage: PropTypes.string,
   fetchingMessage: PropTypes.string,
   noMarkdownMessage: PropTypes.string,
@@ -85,8 +85,8 @@ Markdown.propTypes = {
 }
 
 Markdown.defaultProps = {
-  verbose: true,
-  link: Link,
+  // verbose: true,
+  // link: Link,
   initializingMessage: '',
   fetchingMessage: '',
   noMarkdownMessage: '',
