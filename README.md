@@ -2,13 +2,29 @@
 
 `@floydnoel/react-kit`
 
+<!-- My favorite packages and components together, forever! -->
+
 ## About
 
-My favorite packages and components together, forever!
+Projects like create-react-app, Next.js, and Gatsby have demonstrated the utility of creating a more integrated **developer experience** in the JavaScript ecosystem. Having used Meteor for several years, I enjoy the productivity that a batteries-included experience provides. For now, I'm firmly in the React world, and I find myself most often working with create-react-app.
+
+JavaScript is certainly blessed with a plethora of packages to choose from. What can often be missing is the **cohesiveness** that frameworks and component libraries provide. I've used quite a few of these and the experience can often be highly productive and at the same time often frustrating.
+
+So I decided to make a component (and utility) library for myself. One designed from the ground up to work with create-react-app. Dedicated to making it as **easy and fast** as possible to build a great React app. Of course, I'll support other React frameworks whenever possible.
+
+## Goals
+
+The goals of this project are ideals that I'd like to maintain wherever possible.
+
+The most important goal is _easy and reliable compatibility with create-react-app_. Every user should be able to use this package with no extra steps beyond installing it into their create-react-app project. Ensuring this goal will require lots of tests!
+
+The second most important goal is _documentation_. Every prop and argument should be documented, just like any good component library. Many examples should be provided, and those examples should form the basis of the snapshot tests. The documentation itself is a create-react-app project using only components available in this package.
+
+Other goals include offering built in support for VSCode-based tooling. Components and code should support VSCode debugging, [ESLint](eslint.org) linting, and [Prettier](prettier.io) formatting. Additionally, _rely on the fantastic open-source community_ of packages whereever possible. Writing the universe from scratch is not a goal of this project.
 
 ## Status
 
-Work-in-progress, expect a lot of changes.
+Early work-in-progress, expect a lot of changes. Under development as a monorepo for now (docs and components in the same project).
 
 ## Getting started
 
@@ -22,12 +38,10 @@ yarn add @floydnoel/react-kit
 
 ### import and use
 
-```js
+```jsx
 import { Markdown } from '@floydnoel/react-kit'
 
-// ...
-// in a component
-;<Markdown># hello, world</Markdown>
+let title = () => <Markdown># hello, world</Markdown>
 ```
 
 ## Components
@@ -35,16 +49,7 @@ import { Markdown } from '@floydnoel/react-kit'
 - [Markdown](/src/components/markdown)
 - [TextField](/src/components/text-field)
 - [Json](/src/components/json)
-
-## Core Ideals
-
-- React-first components, built just for React. This will include testing with React-likes (like Preact) in the future.
-- Dogfood all components via the documentation app, which is built with `create-react-app`.
-- Built in VSCode support for tooling.
-  - Debugging support (TODO: test/setup)
-  - [Prettier](prettier.io)
-  - [ESLint](eslint.org)
-- Support docs written in markdown, living with the code
+- [React Router](/src/components/router)
 
 ## Code conventions
 
