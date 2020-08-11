@@ -15,7 +15,7 @@ import { getSectionContent } from './markdown-utils'
 let Markdown = ({
   markdown,
   markdownUrl,
-  link = Link,
+  link = Link, // setting this in the default props causes a test to fail
   section,
   children = markdown,
   // verbose,

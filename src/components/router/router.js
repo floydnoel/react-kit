@@ -6,12 +6,10 @@ import {
   Link as BrowserLink,
 } from 'react-router-dom'
 
-const Router = ({
-  // TODO: get from homepage in package.json or somewhere
-  basename = '/react-kit',
-  children,
-  ...rest
-}) => <BrowserRouter {...{ basename, ...rest }}>{children}</BrowserRouter>
+const { PUBLIC_URL } = process.env
+const Router = ({ basename = PUBLIC_URL, children, ...rest }) => (
+  <BrowserRouter {...{ basename, ...rest }}>{children}</BrowserRouter>
+)
 
 const Link = ({
   // copy `href` to `to` if necessary
@@ -19,13 +17,14 @@ const Link = ({
   to,
   children,
   ...rest
-}) => {
-  console.log({ href, to, winner: to || href })
-  return <BrowserLink {...{ to: to || href, ...rest }}>{children}</BrowserLink>
-}
+}) => <BrowserLink {...{ to: to || href, ...rest }}>{children}</BrowserLink>
 
-export { Router, Switch, Route, //MyLink as 
-Link }
+export {
+  Router,
+  Switch,
+  Route, //MyLink as
+  Link,
+}
 // https://reactrouter.com/web/guides/quick-start
 // basename: process.env.PUBLIC_URL
 // https://github.com/facebook/create-react-app/issues/1765

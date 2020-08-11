@@ -10,13 +10,11 @@ import readme from './README.md'
 // const Json = () => <div>{JSON.stringify(json)}</div>;
 
 function App() {
+  console.log({ publicUrl: process.env.PUBLIC_URL })
   return (
     <div className='App'>
       <header className='App-header'>
-        <Markdown
-          markdownUrl={readme}
-          section={`react-kit`}
-        />
+        <Markdown markdownUrl={readme} section={`react-kit`} />
       </header>
       {/* <Json>{json}</Json> */}
       <p>
