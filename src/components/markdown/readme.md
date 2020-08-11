@@ -8,11 +8,11 @@ Examples:
 import React from 'react'
 import { Markdown } from '@floydnoel/react-kit'
 
-const SomeMarkdown = () => {
+let SomeMarkdown = () => {
   return <Markdown># Some markdown</Markdown>
 }
 
-const FetchedMarkdown = () => {
+let FetchedMarkdown = () => {
   return (
     <Markdown markdownUrl='https://raw.githubusercontent.com/floydnoel/exceldate/1.1.0/README.md' />
   )

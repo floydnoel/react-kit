@@ -1,13 +1,13 @@
-const convertToLink = (sectionTitle) => {
+let convertToLink = (sectionTitle) => {
   return sectionTitle.toLowerCase().split(' ').slice(1).join('-')
 }
 
-const getContentSections = (content) => {
-  const result = {}
+let getContentSections = (content) => {
+  let result = {}
   let cur = ''
   content.split('\n\n').forEach((e) => {
     if (e.indexOf('#') === 0) {
-      const link = convertToLink(e)
+      let link = convertToLink(e)
       cur = link
       result[link] = [e]
     } else if (cur) {
@@ -17,8 +17,8 @@ const getContentSections = (content) => {
   return result
 }
 
-const getSectionContent = ({ content, section }) => {
-  const key = section.indexOf('#') === 0 ? section.slice(1) : section
+let getSectionContent = ({ content, section }) => {
+  let key = section.indexOf('#') === 0 ? section.slice(1) : section
   return getContentSections(content)[key]?.join('\n\n') || ''
 }
 

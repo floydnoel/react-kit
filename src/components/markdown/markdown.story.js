@@ -9,8 +9,8 @@ import {
 import readme from './readme.md'
 // import { Link } from 'react-router-dom'
 
-const MarkdownStory = () => {
-  const [markdownUrl, setMarkdownUrl] = useState('')
+let MarkdownStory = () => {
+  let [markdownUrl, setMarkdownUrl] = useState('')
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
       <Markdown markdownUrl={readme} />

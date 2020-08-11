@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TextField = ({
+let TextField = ({
   value,
   onChange,
   onChangeValue,

@@ -7,10 +7,10 @@ import { Markdown } from 'components'
 // import json from './package.json';
 import readme from './README.md'
 
-// const Json = () => <div>{JSON.stringify(json)}</div>;
+// let Json = () => <div>{JSON.stringify(json)}</div>;
 
 function App() {
-  console.log({ publicUrl: process.env.PUBLIC_URL })
+  // console.log({ publicUrl: process.env.PUBLIC_URL })
   return (
     <div className='App'>
       <header className='App-header'>
