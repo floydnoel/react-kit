@@ -18,9 +18,9 @@ The goals of this project are ideals that I'd like to maintain wherever possible
 
 The most important goal is _easy and reliable compatibility with create-react-app_. Every user should be able to use this package with no extra steps beyond installing it into their create-react-app project. Ensuring this goal will require lots of tests!
 
-The second most important goal is _documentation_. Every prop and argument should be documented, just like any good component library. Many examples should be provided, and those examples should form the basis of the snapshot tests. The documentation itself is a create-react-app project using only components available in this package.
+The second most important goal is _great documentation_. Every prop and argument should be documented and demonstrated, just like any good component library. Examples should be provided, and they be reflected in the snapshot tests. The documentation itself is a create-react-app project using only components available in this package.
 
-Other goals include offering built in support for VSCode-based tooling. Components and code should support VSCode debugging, [ESLint](eslint.org) linting, and [Prettier](prettier.io) formatting. Additionally, _rely on the fantastic open-source community_ of packages whereever possible. Writing the universe from scratch is not a goal of this project.
+Other goals include offering built in support for VSCode-based tooling. Components and code should support VSCode debugging, [ESLint](eslint.org) linting, and [Prettier](prettier.io) formatting. Additionally, _rely on the fantastic open-source community_ of packages whereever possible. Writing the universe from scratch is not a goal of this project. I'd also like to make styling easy and flexible, while providing enough to make things look decent out of the box.
 
 ## Status
 
