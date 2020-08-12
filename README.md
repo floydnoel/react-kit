@@ -65,5 +65,5 @@ let title = () => <Markdown># hello, world</Markdown>
     - `src`: source code files
       - `components`: source code for components published in the npm package
       - `docs`: docs source code
-- Using prettier (customized) and eslint, run `yarn format` to run prettier
+- Using prettier ([customized](/.prettierrc.json)) and eslint, run `yarn format` to run prettier
 - Experimental: prefer `let` over `const`
