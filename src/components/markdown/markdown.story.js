@@ -41,7 +41,7 @@ let MarkdownStory = () => {
           reset
         </button>
         <Markdown
-          noMarkdownMessage='Specify a markdown URL to begin'
+          noMarkdownMessage="Specify a markdown URL to begin"
           markdownUrl={markdownUrl}
         />
       </div>

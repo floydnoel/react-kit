@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path='/src/components/markdown'>
+        <Route exact path="/src/components/markdown">
           <MarkdownStory />
         </Route>
         <Route>

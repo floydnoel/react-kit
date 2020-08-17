@@ -12,14 +12,14 @@ import readme from './README.md'
 function App() {
   // console.log({ publicUrl: process.env.PUBLIC_URL })
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div className="App">
+      <header className="App-header">
         <Markdown markdownUrl={readme} section={`react-kit`} />
       </header>
       {/* <Json>{json}</Json> */}
       <p>
-        [ <a href='https://floydnoel.github.io/react-kit/'>docs</a>,{' '}
-        <a href='https://github.com/floydnoel/react-kit'>repo</a> ]
+        [ <a href="https://floydnoel.github.io/react-kit/">docs</a>,{' '}
+        <a href="https://github.com/floydnoel/react-kit">repo</a> ]
       </p>
       <div
         style={{
