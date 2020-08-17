@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b892b9edc17ef10cb858e1fffb57f9b8",
+    "revision": "c6aa5bbb8e0a80c2331ebfd298f1ab3c",
     "url": "/react-kit/index.html"
   },
   {
-    "revision": "8ff0c79edf1f594b4aa9",
+    "revision": "f2b263a969329ac84eb8",
     "url": "/react-kit/static/css/main.adda5f94.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-kit/static/js/2.4c33a9f4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8ff0c79edf1f594b4aa9",
-    "url": "/react-kit/static/js/main.58cbe628.chunk.js"
+    "revision": "f2b263a969329ac84eb8",
+    "url": "/react-kit/static/js/main.0d779bd7.chunk.js"
   },
   {
     "revision": "ce4b400754e853e1da8e",
@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-kit/static/media/README.21e67dca.md"
   },
   {
-    "revision": "64c8206396e9cbef28f76d1b95bcf3c3",
-    "url": "/react-kit/static/media/readme.64c82063.md"
+    "revision": "4d103b3dff1057b92163d104dd4b65ac",
+    "url": "/react-kit/static/media/readme.4d103b3d.md"
   }
 ]);
