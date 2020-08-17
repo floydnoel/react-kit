@@ -20,11 +20,13 @@ let Link = ({
 }) => <BrowserLink {...{ to: to || href, ...rest }}>{children}</BrowserLink>
 
 export {
+  // https://reactrouter.com/web/guides/quick-start
   Router,
   Switch,
-  Route, //MyLink as
+  Route,
   Link,
 }
+
 // https://reactrouter.com/web/guides/quick-start
 // basename: process.env.PUBLIC_URL
 // https://github.com/facebook/create-react-app/issues/1765
