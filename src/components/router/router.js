@@ -6,6 +6,7 @@ import {
   Link as BrowserLink,
 } from 'react-router-dom'
 
+// PUBLIC_URL is set by CRA based on the homepage listed in package.json
 let { PUBLIC_URL } = process.env
 let Router = ({ basename = PUBLIC_URL, children, ...rest }) => (
   <BrowserRouter {...{ basename, ...rest }}>{children}</BrowserRouter>
