@@ -10,6 +10,8 @@
 
 # production
 /build
+/src/docs/README.md
+/src/docs/package.json
 
 # logs
 npm-debug.log*
