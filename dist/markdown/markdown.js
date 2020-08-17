@@ -1,44 +1,92 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import MarkdownToJsx from 'markdown-to-jsx';
-import { getSectionContent } from './markdown-utils';
+import { Link } from 'components';
+import { getSectionContent } from './markdown-utils'; // ***TODOS***
+// - better code blocks & styling
+// - handle external links
+// - option to throw instead?
+// - log possible errors?
 
-const Markdown = ({
+let Markdown = ({
   markdown,
   markdownUrl,
+  link = Link,
+  // setting this in the default props causes a test to fail
   section,
-  children,
+  children = markdown,
+  // verbose,
+  initializingMessage,
+  fetchingMessage,
+  noMarkdownMessage,
   ...rest
 }) => {
-  const [content, setContent] = useState(children || section || markdown);
+  let [content, setContent] = useState(children || initializingMessage);
   useEffect(() => {
-    const fetchText = async ({
+    let fetchText = async ({
       url
     }) => {
-      const response = await fetch(url);
-      const body = await response.text();
+      let response = await fetch(url);
+      let body = await response.text();
       return body;
     };
 
     if (markdownUrl) {
+      if (fetchingMessage) setContent(fetchingMessage);
       fetchText({
         url: markdownUrl
-      }).then(content => setContent(section ? getSectionContent({
-        content,
-        section
-      }) : content));
+      }).then(content => {
+        if (section) {
+          let con = getSectionContent({
+            content,
+            section
+          });
+          setContent(con ? con : noMarkdownMessage);
+        } else if (content.indexOf('<!DOCTYPE html>') === 0) {
+          setContent(noMarkdownMessage);
+        } else {
+          setContent(content);
+        }
+      });
     }
-  }, [markdownUrl, section]);
-  return /*#__PURE__*/React.createElement(MarkdownToJsx, rest, content);
+  }, [fetchingMessage, noMarkdownMessage, markdownUrl, section]);
+  if (!children && !markdownUrl) return noMarkdownMessage;
+  return /*#__PURE__*/React.createElement(MarkdownToJsx, {
+    options: {
+      overrides: {
+        a: {
+          component: link // props: {
+          //   className: 'foo',
+          // },
+
+        }
+      }
+    },
+    // style: {
+    //   animation: 'slidein 3s',
+    // },
+    ...rest
+  }, content);
 };
 
 Markdown.propTypes = {
   markdown: PropTypes.string,
   markdownUrl: PropTypes.string,
-  children: PropTypes.node,
+  link: PropTypes.element,
+  section: PropTypes.string,
+  children: PropTypes.string,
+  // verbose: PropTypes.bool,
+  initializingMessage: PropTypes.string,
+  fetchingMessage: PropTypes.string,
+  noMarkdownMessage: PropTypes.string,
   rest: PropTypes.any
 };
 Markdown.defaultProps = {
-  children: '##### processing markdown...'
+  // verbose: true,
+  // link: Link,
+  initializingMessage: '',
+  fetchingMessage: '',
+  noMarkdownMessage: ''
 };
 export default Markdown;
+//# sourceMappingURL=markdown.js.map
