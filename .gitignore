@@ -10,6 +10,8 @@
 
 # production
 /build
+/dist
+/_site
 /src/docs/README.md
 /src/docs/package.json
 
@@ -17,7 +19,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
 
 # misc
 .DS_Store
