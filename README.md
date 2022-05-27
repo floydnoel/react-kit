@@ -2,7 +2,7 @@
 
 `@floydnoel/react-kit`
 
-<!-- Useful React components -->
+<!-- Useful React Components -->
 
 ## About
 
@@ -30,8 +30,8 @@ let title = () => <Markdown># hello, world</Markdown>
 
 - [Markdown](/src/components/markdown)
 - [TextField](/src/components/text-field)
-- [Json](/src/components/json)
 - [React Router](/src/components/router)
+- [Error Boundary](/src/components/error-boundary)
 
 ## Code conventions
 
@@ -48,4 +48,3 @@ let title = () => <Markdown># hello, world</Markdown>
       - `components`: source code for components published in the npm package
       - `docs`: docs source code
 - Using prettier ([customized](/.prettierrc.json)) and eslint, run `yarn format` to run prettier
-

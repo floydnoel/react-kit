@@ -1,22 +1,15 @@
-/* eslint-disable flowtype/require-valid-file-annotation */
 import React from 'react'
-// import logo from './logo.svg';
 import './app.css'
 import { Markdown } from 'components'
-// import TextField from 'components/interaction/text-field/text-field';
-// import json from './package.json';
+
 import readme from './README.md'
 
-// let Json = () => <div>{JSON.stringify(json)}</div>;
-
 function App() {
-  // console.log({ publicUrl: process.env.PUBLIC_URL })
   return (
     <div className="App">
       <header className="App-header">
         <Markdown markdownUrl={readme} section={`react-kit`} />
       </header>
-      {/* <Json>{json}</Json> */}
       <p>
         [ <a href="https://floydnoel.github.io/react-kit/">docs</a>,{' '}
         <a href="https://github.com/floydnoel/react-kit">repo</a> ]

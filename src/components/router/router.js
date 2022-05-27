@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   BrowserRouter,
-  Switch,
+  Routes,
   Route,
   Link as BrowserLink,
 } from 'react-router-dom'
@@ -23,7 +23,7 @@ let Link = ({
 export {
   // https://reactrouter.com/web/guides/quick-start
   Router,
-  Switch,
+  Routes as Switch,
   Route,
   Link,
 }
