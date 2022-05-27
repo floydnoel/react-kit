@@ -27,10 +27,13 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.2.0",
+    "eslint": "^8.16.0",
     "eslint-plugin-prettier": "^4.0.0",
     "markdown-to-jsx": "^7.1.7",
     "prettier": "^2.6.2",
